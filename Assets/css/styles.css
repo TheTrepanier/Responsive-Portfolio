@@ -1,0 +1,304 @@
+/* Colors
+
+#90AFC5 mist
+#336B87 stone -> .name-in-header, h2
+#2A3132 shadow -> body, a
+#763626 autumn foliage -> a:hover
+#ededed white-ish -> background
+
+-------------------*/
+
+/* Fonts 
+-------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Oswald:500');
+
+/* Global Styles
+-------------------*/
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    height: 80%;
+    font-family: 'Lato', sans-serif;
+    background-color: #ededed;
+    color: #2A3132;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #336B87;
+}
+
+a {
+    color: #2A3132;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #763626;
+}
+
+main {
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+
+
+/* 
+Headers and Footers
+-------------------*/
+ 
+.header {
+    background: #ffffff;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #2A3132;
+    margin-bottom: 2rem;
+}
+.header-wrapper {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}    
+.masthead {
+    background: #336b87;
+    color: #ededed;
+    max-width: 250px;
+}
+.wrapper {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+nav {
+    font-size: 1.2em;
+    text-align: right;
+}
+nav > li {
+    display: inline-block;
+    border-right: 1px solid #2A3132;
+    padding: 0.25em;
+}
+
+nav li:last-child {
+    border: 0;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    background: #763626;
+    color: #ededed;
+    border-top: 10px solid #2A3132;
+}
+
+footer, .push {
+    height: 100px;
+}
+
+.contact-info > a {
+    margin-right: 25px;
+    color: #ededed
+}
+
+.contact-info > a:last-child {
+    margin-right: 0;
+}
+
+/* 
+index.html
+-------------------*/
+
+
+.main-section {
+    margin: auto;
+    background: #ffffff;
+    content: "";
+    clear: both;
+    display: table;
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+.main-section-header {
+    margin: 20px;
+}
+.profile-image {
+    max-width: 200px;
+    float: left;
+    margin: 0.8em;
+}
+.about-me-text {
+    margin: 25px;
+}
+
+.signature {
+    margin-right: 55px;
+    margin-bottom: 25px;
+}
+
+#sig{
+    text-align: right;
+    font-style: italic;
+}
+
+/* 
+contact.html
+------------------------*/
+
+.contact-form {
+    min-width: 960px;
+    max-width: 960px;
+}
+
+input, label {
+    margin: 20px;
+}
+
+input[type=text] {
+    width: 900px;
+}
+
+input[type=submit] {
+    color: #ededed;
+    background: #336B87;
+    border: 0;
+    /* padding: 12px; */
+    width: 100px;
+    height: 25px;
+}
+
+#message {
+    padding-bottom: 50px;
+}
+
+/* 
+portfolio.html 
+-----------------------*/
+
+.gallery-wrapper {
+    max-width: 960px;
+    min-width: 960px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.gallery-item {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-plate {
+    background: #336B87;
+    color: #ededed;
+    text-align: center;
+    height: 2em;
+    position: relative;
+    bottom: 50px;
+}
+
+.portfolio-img {
+    width: 300px;
+}
+
+/* 
+Media Queries
+---------------------------------*/
+
+@media (max-width: 980px) {
+    
+}
+@media screen and (max-width: 768px) {
+    .header-wrapper {
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+    .masthead {
+        max-width: 250px;
+    }
+    .wrapper {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    nav {
+        text-align: right;
+    }
+    .main-section {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+    .profile-image {
+        max-width: 200px;
+        float: left;
+        margin: 0.8em;
+    }
+}
+@media screen and (max-width: 640px) {
+    .header-wrapper {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .masthead {
+        max-width: 100%;
+    }
+    .wrapper {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    nav {
+        text-align: center;
+    }
+    .main-section {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+    .profile-image {
+        max-width: 85%;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+    .about-me-text {
+        width: 85%;
+        margin: auto;
+        font-size: 1.2rem;
+    }
+}
