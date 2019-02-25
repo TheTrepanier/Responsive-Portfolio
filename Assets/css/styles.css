@@ -171,8 +171,8 @@ contact.html
 ------------------------*/
 
 .contact-form {
-    min-width: 960px;
-    max-width: 960px;
+    min-width: 650px;
+    max-width: 650px;
 }
 
 input, label {
@@ -180,7 +180,7 @@ input, label {
 }
 
 input[type=text] {
-    width: 900px;
+    width: 90%;
 }
 
 input[type=submit] {
@@ -201,9 +201,9 @@ portfolio.html
 -----------------------*/
 
 .gallery-wrapper {
-    max-width: 960px;
-    min-width: 960px;
-    margin: 20px;
+    max-width: 650px;
+    min-width: 650px;
+    /* margin: 30px; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -229,15 +229,15 @@ portfolio.html
 }
 
 .portfolio-img {
-    width: 300px;
+    max-width: 300px;
 }
 
 /* 
 Media Queries
 ---------------------------------*/
 
-@media (max-width: 980px) {
-    
+@media screen and (max-width: 980px) {
+
 }
 @media screen and (max-width: 768px) {
     .header-wrapper {
@@ -260,6 +260,7 @@ Media Queries
     }
     .main-section {
         max-width: 90%;
+        min-width: 90%;
         margin-bottom: 2rem;
     }
     .profile-image {
@@ -267,8 +268,21 @@ Media Queries
         float: left;
         margin: 0.8em;
     }
+    /* portfolio.html 
+    ------------------*/
+    .gallery-wrapper {
+        max-width: 90%;
+        min-width: 90%;
+    }
+    /* contact.html */
+    .contact-form {
+        min-width: 90%;
+        max-width: 90%;
+    }
+
 }
 @media screen and (max-width: 640px) {
+    /* Global */
     .header-wrapper {
         max-width: 100%;
         display: grid;
@@ -288,8 +302,10 @@ Media Queries
     }
     .main-section {
         max-width: 90%;
+        min-width: 90%;
         margin-bottom: 2rem;
     }
+    /* index.html */
     .profile-image {
         max-width: 85%;
         float: none;
@@ -301,4 +317,20 @@ Media Queries
         margin: auto;
         font-size: 1.2rem;
     }
+    /* portfolio.html */
+    .gallery-wrapper {
+        max-width: 90%;
+        min-width: 90%;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 10px;
+    }
+    /* contact.html */
+    .contact-form {
+        min-width: 90%;
+        max-width: 90%;
+    }
+    
 }
